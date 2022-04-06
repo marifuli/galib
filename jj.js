@@ -7,7 +7,8 @@ arrows.forEach((arrow, i) => {
     arrow.addEventListener("click", () => {
         clickCounter++;
         if (itemNumbar - (4 + clickCounter) >= 0) {
-            animeLists[i].getElementsByClassName.transform = `translateX(${
+            console.log(animeLists[i] || 12);
+            animeLists[i].style.transform = `translateX(${
                 animeLists[i].computedStyleMap().get("transform")[0].x.value - 300
             }px)`;
         } else {

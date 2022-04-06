@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY Design</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,300&display=swap" rel="stylesheet"> 
@@ -56,9 +56,9 @@
             <div class="anime-list-container">
                 <h1 class="anime-list-title">NEW RELEASES</h1>
                 <div class="anime-list-wrapper">
-                    <div class="anime-list">
+                    <div class="anime-list" id="responsive">
                         <div class="anime-list-item">
-                            <img class="anime-list-item-img" src="img/1e0a42bd8392c6cdb1d1d0921befd4b4.jpg" alt="">
+                            <img class="anime-list-item-img" src="/img/1e0a42bd8392c6cdb1d1d0921befd4b4.jpg" alt="">
                             <span class="anime-list-item-title">Her</span>
                             <p class="anime-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe delectus accusantium quo voluptatibus totam odit vero atque, ab placeat voluptatem deserunt Dignissimos.</p>
                             <button class="anime-list-item-button">Watch</button>
@@ -251,6 +251,35 @@
             </div>
         </div>
     </div>
-    <script src="jj.js"></script>
+    <!-- <script src="jj.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+    $(document).ready(function() {
+        $('#responsive').lightSlider({
+            item:4,
+            loop:false,
+            slideMove:2,
+            easing: 'cubic-bezier(0.25, 0, 0.25, 1)',
+            speed:600,
+            responsive : [
+                {
+                    breakpoint:800,
+                    settings: {
+                        item:3,
+                        slideMove:1,
+                        slideMargin:6,
+                      }
+                },
+                {
+                    breakpoint:480,
+                    settings: {
+                        item:2,
+                        slideMove:1
+                      }
+                }
+            ]
+        });  
+      });
+    </script>
 </body>
 </html>
