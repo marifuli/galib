@@ -17,7 +17,7 @@ arrows.forEach((arrow, i) => {
     });
     console.log(animeLists[i].querySelectorAll("img").length);
 });
-
+ 
 
 
 
